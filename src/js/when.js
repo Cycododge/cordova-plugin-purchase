@@ -49,6 +49,10 @@ store.when = function(query, once, callback) {
         ///    - Called when an [order](#order) failed.
         ///    - The `err` parameter is an [error object](#errors)
         addPromise('error');
+        
+        ///  - `unowned(product)`
+        ///    - Called when a transaction is not found for a product
+        addPromise('unowned');
 
         ///  - `approved(product)`
         ///    - Called when a product [order](#order) is approved.
